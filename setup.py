@@ -9,10 +9,13 @@ import shutil
 print("Creating `.bashrc.d`...")
 os.makedirs(os.path.expanduser("~") + "/.bashrc.d", exist_ok=True)
 
-print("Copying `vi`...")
-shutil.copyfile("vi", os.path.expanduser("~") + "/.bashrc.d/vi")
+print("Copying `bitwarden`...")
+shutil.copyfile("bashrc.d/bitwarden", os.path.expanduser("~") + "/.bashrc.d/bitwarden")
 
-print("Copying `.tmux.conf`...")
-shutil.copyfile(".tmux.conf", os.path.expanduser("~") + "/.tmux.conf")
+print("Copying `vi`...")
+shutil.copyfile("bashrc.d/vi", os.path.expanduser("~") + "/.bashrc.d/vi")
+
+print("Copying `tmux.conf`...")
+shutil.copyfile("tmux.conf", os.path.expanduser("~") + "/.tmux.conf")
 
 print("Success!")
